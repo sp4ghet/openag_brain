@@ -29,7 +29,7 @@ class DS18B20:
         try:
             self.sensor = W1ThermSensor()
             rospy.loginfo("Connected to DS18B20")
-        except I2CError:
+        except:
             rospy.logwarn("Failed to connect to DS18B20")
             pass
 
